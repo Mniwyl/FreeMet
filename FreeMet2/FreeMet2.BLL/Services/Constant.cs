@@ -9,7 +9,7 @@ namespace FreeMet2.BLL
     internal class Constant
     {
         //todo:
-        public const string Root = "127.0.0.1";
-        public const string testAddress = "127.0.0.1";
+        public const string Root = "https://192.168.3.14:5001";
+        public const string testAddress = "WeatherForecast";
     }
 }

@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FreeMet2.Themes", "FreeMet2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMet2.BLL", "FreeMet2.BLL\FreeMet2.BLL.csproj", "{BB084BF0-4C08-4FE7-A04D-01330155D0CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMet2.Utils", "FreeMet2.Utils\FreeMet2.Utils.csproj", "{EE4C1F10-92DD-4E9A-B89B-681BE3E51CAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{BB084BF0-4C08-4FE7-A04D-01330155D0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB084BF0-4C08-4FE7-A04D-01330155D0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB084BF0-4C08-4FE7-A04D-01330155D0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4C1F10-92DD-4E9A-B89B-681BE3E51CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4C1F10-92DD-4E9A-B89B-681BE3E51CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4C1F10-92DD-4E9A-B89B-681BE3E51CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4C1F10-92DD-4E9A-B89B-681BE3E51CAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,9 +49,16 @@
     <Compile Include="IServices\IAuthenticationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Account\AuthenticationService.cs" />
+    <Compile Include="Services\Constant.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FreeMet2.Utils\FreeMet2.Utils.csproj">
+      <Project>{ee4c1f10-92dd-4e9a-b89b-681be3e51cae}</Project>
+      <Name>FreeMet2.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
