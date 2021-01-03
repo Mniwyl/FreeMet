@@ -21,8 +21,8 @@
                 <TextBox Grid.Row="0" Margin="4" MinHeight="40" MinWidth="200" Style="{StaticResource LoginTextBox}"/>
                 <PasswordBox Grid.Row="1" Margin="4" MinHeight="40" MinWidth="200" Style="{StaticResource LoginPasswordBox}"/>
 
-                <controls:CircleButton Grid.Row="2" Margin="4" Content="Login" MinWidth="200" MinHeight="30"></controls:CircleButton>
-                <CheckBox HorizontalAlignment="Right" Margin="4" Grid.Row="3" Content="remember" Style="{StaticResource CustomCheckBox}"></CheckBox>
+                <controls:CircleButton Command="{Binding LoginCommand}" Grid.Row="2" Margin="4" Content="Login" MinWidth="120" MinHeight="30"></controls:CircleButton>
+                <CheckBox IsChecked="{Binding IsRemember,Mode=TwoWay}" HorizontalAlignment="Right" Margin="4" Grid.Row="3" Content="remember" Style="{StaticResource CustomCheckBox}"></CheckBox>
             </Grid>
 
         </StackPanel>
