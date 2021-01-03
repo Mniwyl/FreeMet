@@ -1,0 +1,16 @@
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\bin\Debug\FreeMet2.Controls.dll
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\bin\Debug\FreeMet2.Controls.pdb
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls.Properties.Resources.resources
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls.csproj.GenerateResource.cache
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls.csproj.CoreCompileInputs.cache
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls.dll
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls.pdb
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls_MarkupCompile.cache
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls_MarkupCompile.lref
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\Themes\windowbase_style.baml
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\FreeMet2.Controls.g.resources
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\Themes\Fonts.baml
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\Themes\textbox_style.baml
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\Themes\checkbox_style.baml
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Controls\obj\Debug\Themes\button_style.baml

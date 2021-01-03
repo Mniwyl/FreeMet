@@ -1,0 +1,8 @@
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\bin\Debug\FreeMet2.Theme.Dark.dll
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\bin\Debug\FreeMet2.Theme.Dark.pdb
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\obj\Debug\FreeMet2.Theme.Dark.Properties.Resources.resources
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\obj\Debug\FreeMet2.Theme.Dark.csproj.GenerateResource.cache
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\obj\Debug\FreeMet2.Theme.Dark.csproj.CoreCompileInputs.cache
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\obj\Debug\FreeMet2.Theme.Dark.dll
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\obj\Debug\FreeMet2.Theme.Dark.pdb
+C:\Users\YMXD\Desktop\FreeMet2\FreeMet2\FreeMet2.Theme.Dark\obj\Debug\FreeMet2.Theme.Dark.csprojAssemblyReference.cache
