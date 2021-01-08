@@ -39,8 +39,12 @@ namespace FreeMet2.Utils
         /// 创建INI文件
         /// </summary>
         /// <param name="path"></param>
-        public void CreateIni(string path,string name)
+        public static void CreateIni(string path,string name)
         {
+            if(!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
             var filePath = Path.Combine(path, name);//在当前程序路径创建
             File.Create(filePath);//创建INI文件
         }

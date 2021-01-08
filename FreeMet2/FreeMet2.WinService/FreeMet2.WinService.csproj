@@ -4,19 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82DF0DC7-46B5-4447-B0C6-122F34EB91CE}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>FreeMet2</RootNamespace>
-    <AssemblyName>FreeMet2</AssemblyName>
+    <ProjectGuid>{AD4922D6-BEAB-4904-8B0F-5D75E66AC9B7}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>FreeMet2.WinService</RootNamespace>
+    <AssemblyName>FreeMet2.WinService</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -49,7 +46,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -67,44 +63,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="ApplicationData.cs" />
-    <Compile Include="Converter\Base64ResConverter.cs" />
-    <Compile Include="ViewModel\HomeViewModel.cs" />
-    <Compile Include="ViewModel\LoginAccountViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="Views\HomeView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\LoginAccountView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Views\HomeView.xaml.cs">
-      <DependentUpon>HomeView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\LoginAccountView.xaml.cs">
-      <DependentUpon>LoginAccountView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Impl\LoggerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +77,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Impl\AuthenticationService.cs" />
+    <Compile Include="Impl\NavigateService.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -129,37 +90,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FreeMet2.BLL\FreeMet2.BLL.csproj">
-      <Project>{bb084bf0-4c08-4fe7-a04d-01330155d0cd}</Project>
-      <Name>FreeMet2.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FreeMet2.Controls\FreeMet2.Controls.csproj">
-      <Project>{76076120-d233-4683-9c37-0710ed96744d}</Project>
-      <Name>FreeMet2.Controls</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FreeMet2.Interface\FreeMet2.Interface.csproj">
       <Project>{47534795-e7dc-4eba-919d-6a221bb3ccfd}</Project>
       <Name>FreeMet2.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FreeMet2.Theme.Light\FreeMet2.Theme.Light.csproj">
-      <Project>{72d92f9c-b14f-4698-877d-1007c4a32d3c}</Project>
-      <Name>FreeMet2.Theme.Light</Name>
     </ProjectReference>
     <ProjectReference Include="..\FreeMet2.Utils\FreeMet2.Utils.csproj">
       <Project>{ee4c1f10-92dd-4e9a-b89b-681be3e51cae}</Project>
       <Name>FreeMet2.Utils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FreeMet2.WinService\FreeMet2.WinService.csproj">
-      <Project>{ad4922d6-beab-4904-8b0f-5d75e66ac9b7}</Project>
-      <Name>FreeMet2.WinService</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

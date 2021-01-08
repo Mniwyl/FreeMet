@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,15 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DEFAULT_MAN_ICON" xml:space="preserve">
+    <value>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAfCAYAAAAMeVbNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABkAAAAZAAPlsXdAAAAB3RJTUUH5QEIDgABDxA8UgAABOtJREFUSMe1lktsVGUUx3/nu495tJ3S0imttVQlEkQMgs+goKIiaqKJC91o1KhR2ZjoQhMXvt2pC9GNipqY6AKNwcTHBl+QmGqCAQ0vUQv2MbUOdGY6M/f1HRelUpgOYtT/4uZ+Nze/79xz/ud8VzhBux+5gWay5Rq2HgKCuA5Yy7K3vm76vktzXQNcBxSAHcA+oBMkQThka8GkeC677loNqojnsOz1L08JngYePboBQBUYQySHKig/ie9+DLLZpJw9thapBnEDxDSBG8Cbtc4CZyF0AV3ApVh9Gms/tdVoI8gAIvxw95q/gauCqgF8/l4LgQ2o3oG1YOTkcJNKY1LpFmAe1k5vNpdUwdqZ1bnie0YTe9wrDTk3mSwgC4C8l+8lqZSIj0wAchSogOLkcrid8wnHRtEwzGhiDWCbwsv7tzGy6QU0ifNeZ751/jU3Y4M65Z2DhIVhYreESUd43d20rrgAd34nxS1bqP/6c2RcR9XqySMHsGE4D8f1xPVws610rF6PDerEU5PYuI5Jp8GZ9rn4HoIUnLaOpLRt68nhi5//wBS/eX9NNFFw/sqtCCaTxTEWAjO78GSWnEPL+Ss6c6sud4NDd8asvKU5vLJ/m+fne5f6XT2NBeR4N2AMmbMXg8jC4OBQCpHjzN5oRZEA1c1AfdYzsJZofARN4un1MUWobkZkqsEcc/uMt1H9ZCbi+MgEld3fUhrcytSOQeKJ8WM2VPs5Iq83fNWJ8LazLwegfnBvvX5o/9tJtVwHCAsHSaZKZJeuxFanCIaHUJSkNBnW9u/ZVNu9s6I2Zv6sfDd1S3nndoLhA5/lLlj7jt8zcK+/YCFevo+4XCSzZBmIUD+wl3D44LtT3w9+5PctJLt0RWOG54L/8vL92LBOUjrc5XX1bAS5TeOYZPIItlpHXA+ED+PixAOmpa1g/BSLn/+wgTO3z+tVTDpD+5U3Tnid+c/DP8ZvC0YPERkHckrq9H78BT3bw7HRwtSPu7BxOGfhGuD3vPQaXw200NPqcXFPG0bs8nTfAOnefuKpEhoG0w0Ey1sWLZaxjn5dce1abvdX8c6Tjx3HcmZu1j31CnL+tdRjy7cjVXzHcMVAdhHwONCFCGrttBWnlRN06xkX9oxf/PBHFGsJw8Ons/7BW/lp+9Zj8Kue2IgjggKeI71WueW3UrThvO70Q71t3rl6tDYaR2gczVi//XAtueq+t/ZdNlGLuz1HCu2L2ktZ36H/kisZ+uYLnOufeRVHYLwak3LNFYnqJlU2hIlemG/xelf2ZmRmHM2GOyLy3Ui1a8u+yWWJ5Uarujblml9+LgYHTsv5LFlzNWa8ElGsJWRcs8pafVOViwBRYMdYlUpokQZTCbFatv9WoRZNN5NVlkdW3+jLeWvHKhHfj1YxGc+QcqQjUX1W4cy/uktgaDJgNCji+gEiiqCIJHipKmVnlF2/l5FZo0CVvtjqcy2e6e5v9zFhosSW9aqsPrEBynVl7+EKqdzvZHLjZDtGaMsP0ZofYs/hSUZLDScbVrkkSvSmSphglubToui6uWxpFUo1QCzGDXFTVRy/CiahUBaiZE57i1XWDcxLueZAMWhR5SyaaXZkyilJ0TPLQZIzsVVHT+2k/ydKW8U3TcbLf6KZkev8K0qj3JlLCLwHDHLCr8G/CHgYqLpADXjx/0jLn+8iOdMLTYxLAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA3LTE5VDAzOjM5OjE1KzAwOjAwWtAmGAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wNC0xOFQwNjowOTozMSswMDowMBQUf+AAAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAAGN0RVh0c3ZnOmNvbW1lbnQAIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgzkiQCwAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMzczql24IwAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAyNzivvFvBAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE1ODcxOTAxNzHSCBsvAAAAEnRFWHRUaHVtYjo6U2l6ZQAyMjQ4MkKDMFeaAAAAWnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vZGF0YS93d3dyb290L3d3dy5lYXN5aWNvbi5uZXQvY2RuLWltZy5lYXN5aWNvbi5jbi9maWxlcy8xMjQvMTI0OTkyOC5wbmeCcDajAAAAAElFTkSuQmCC</value>
+  </data>
+  <data name="DEFAULT_WOMAN_ICON" xml:space="preserve">
+    <value>data:image/png;base64,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</value>
+  </data>
 </root>

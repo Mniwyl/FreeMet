@@ -51,6 +51,7 @@
     <Compile Include="Controls\PrimaryButton.cs" />
     <Compile Include="Converter\ButtonBaseConverter.cs" />
     <Compile Include="Converter\WindowBaseConverter.cs" />
+    <Compile Include="Controls\PrimaryImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -111,6 +112,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\yes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\man.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\woman.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

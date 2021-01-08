@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FreeMet2.BLL;
+using FreeMet2.Interface;
+using FreeMet2.Interface.IServices;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
@@ -10,9 +13,12 @@ namespace FreeMet2.ViewModel
 {
     public class LoginAccountViewModel:ViewModelBase
     {
-        public LoginAccountViewModel()
+        private readonly IAuthenticationService _authenticationService;
+        private readonly INavigateService _navigateService;
+        public LoginAccountViewModel(IAuthenticationService accountService, INavigateService navigateService)
         {
-            
+            _authenticationService = accountService;
+            _navigateService = navigateService;
         }
 
         #region Dependency Properties

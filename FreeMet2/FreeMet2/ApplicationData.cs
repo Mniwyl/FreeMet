@@ -8,10 +8,35 @@ namespace FreeMet2
 {
     public class ApplicationData
     {
-        public ApplicationData()
+        public const string ConfigPath = "FreeMet";
+
+        private static ApplicationData _instance;
+        public static ApplicationData Instance
         {
-            
+            get
+            {
+                if(_instance == null)
+                {
+                    _instance = new ApplicationData();
+                }
+                return _instance;
+            }
         }
+
+        private string _uid;
+        public string Uid
+        {
+            get => _uid;
+            set => _uid = value;
+        }
+
+        public string _avatar;
+        public string Avatar
+        {
+            get => _avatar;
+            set => _avatar = value;
+        }
+        
         private string _token;
         public string Token
         {

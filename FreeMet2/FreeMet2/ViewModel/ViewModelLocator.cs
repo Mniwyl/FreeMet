@@ -13,6 +13,10 @@
 */
 
 using CommonServiceLocator;
+using FreeMet2.BLL;
+using FreeMet2.Interface;
+using FreeMet2.Interface.IServices;
+using FreeMet2.WinService;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 
@@ -41,9 +45,14 @@ namespace FreeMet2.ViewModel
             ////    // Create run time view services and models
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
-
+            
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<LoginAccountViewModel>();
+            SimpleIoc.Default.Register<HomeViewModel>();
+
+            SimpleIoc.Default.Register<INavigateService, NavigateService>();
+            SimpleIoc.Default.Register<IAuthenticationService, AuthenticationService>();
+            SimpleIoc.Default.Register<ILoggerService, LoggerService>();
         }
 
         public MainViewModel Main
@@ -59,6 +68,14 @@ namespace FreeMet2.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<LoginAccountViewModel>();
+            }
+        }
+
+        public HomeViewModel Home
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<HomeViewModel>();
             }
         }
 
