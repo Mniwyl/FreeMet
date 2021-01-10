@@ -33,4 +33,36 @@
         </Setter>
     </Style>
 
+    <Style TargetType="{x:Type controls:CircleButton}" x:Key="ImageButton">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BackColor}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="{DynamicResource BackColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForeColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:CircleButton}">
+                    <Border
+                        Height="{TemplateBinding Height}"
+                        Width="{TemplateBinding Width}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        CornerRadius="{Binding Path=CornerRadius, RelativeSource={RelativeSource TemplatedParent},
+                                    Converter={StaticResource CornerRadiusConverter}, ConverterParameter=PART_BODY}">
+                        <Border.Background>
+                            <ImageBrush ImageSource="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=ImageBrush}"/>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding Content}" 
+                                          HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
