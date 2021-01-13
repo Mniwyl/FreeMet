@@ -27,7 +27,12 @@ namespace FreeMet2.Controls
             set => SetValue(CornerRadiusProperty, value);
         }
 
-
+        private static DependencyProperty IsAuthorizedProperty;
+        public bool IsAuthorized
+        {
+            get => (bool)GetValue(IsAuthorizedProperty);
+            set => SetValue(IsAuthorizedProperty, value);
+        }
 
         static WindowBase()
         {
@@ -60,6 +65,11 @@ namespace FreeMet2.Controls
                     if (radius >= 0 && radius <= 1000) return true;
                     return false;
                 });
+
+            IsAuthorizedProperty = DependencyProperty.Register("IsAuthorized",
+                typeof(bool),
+                typeof(WindowBase),
+                new PropertyMetadata(false));
         }
 
         public WindowBase() : base()

@@ -62,6 +62,7 @@
                                 BorderThickness="0">
                             <DockPanel Height="Auto">
                                 <StackPanel DockPanel.Dock="Right" Height="32" HorizontalAlignment="Right" VerticalAlignment="Center"  Orientation="Horizontal">
+                                    
                                     <Button x:Name="btnMin" Width="32" Content="&#xe7ad;" Style="{StaticResource WindowBaseButton}" />
                                     <Button x:Name="btnMax" Width="32" Content="&#xe685;" Style="{StaticResource WindowBaseButton}" />
                                     <Button Content="&#xe624;" x:Name="btnClose" Width="32" 
