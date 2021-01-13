@@ -48,7 +48,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\PrimaryButton.cs" />
+    <Compile Include="Controls\CircleButton.cs" />
     <Compile Include="Converter\ButtonBaseConverter.cs" />
     <Compile Include="Converter\WindowBaseConverter.cs" />
     <Compile Include="Controls\PrimaryImage.cs" />
@@ -125,6 +125,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

@@ -61,9 +61,6 @@
                                     Converter={StaticResource CornerRadiusConverter}, ConverterParameter=PART_BODY}"
                                 BorderThickness="0">
                             <DockPanel Height="Auto">
-                                <StackPanel DockPanel.Dock="Left" Height="32" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                                    
-                                </StackPanel>
                                 <StackPanel DockPanel.Dock="Right" Height="32" HorizontalAlignment="Right" VerticalAlignment="Center"  Orientation="Horizontal">
                                     <Button x:Name="btnMin" Width="32" Content="&#xe7ad;" Style="{StaticResource WindowBaseButton}" />
                                     <Button x:Name="btnMax" Width="32" Content="&#xe685;" Style="{StaticResource WindowBaseButton}" />
